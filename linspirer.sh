@@ -10,10 +10,6 @@ am start -n com.android.launcher3/com.innofidei.guardsecure.AdminActivity #å¦‚æž
 
 while true
 do
-    until [ -n $(pidof com.android.launcher3) ]
-    do
-        sleep 30s
-    done
     am broadcast -n com.android.launcher3/com.innofidei.guardsecure.service.EduAppReceiver -a "com.linspirer.edu.class.over"
     am broadcast -n com.android.launcher3/com.innofidei.guardsecure.service.EduAppReceiver -a "com.linspirer.edu.enable.screenshot"
     am broadcast -n com.android.launcher3/com.innofidei.guardsecure.service.EduAppReceiver -a "com.linspirer.edu.enableotg"
